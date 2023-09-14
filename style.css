@@ -9,19 +9,25 @@ body {
   font-family: sans-serif;
 }
 
+
 .blok {
   padding: 20px;
 }
 
+
+
 .horni {
   background-color: #f1c40f;
 }
+
 .prvni {
   background-color: #2ecc71;
 }
+
 .druhy {
   background-color: #e74c3c;
 }
+
 .treti {
   background-color: #8e44ad;
 }
@@ -34,3 +40,50 @@ body {
 	- 640px
 	- 1000px
 */
+
+
+@media(min-width: 640px) {
+
+  .kontejner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+
+  .blok {
+
+    flex-grow: 1;
+  }
+
+  .prvni,
+  .druhy {
+
+    flex-basis: 50%;
+  }
+
+}
+
+@media(min-width: 1000px) {
+  .kontejner {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .blok {
+
+    flex-grow: 1;
+  }
+
+  .prvni,
+  .druhy,
+  .treti {
+
+    flex-basis: calc(100% / 3);
+
+  }
+
+}
